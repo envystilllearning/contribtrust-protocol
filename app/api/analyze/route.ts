@@ -2,8 +2,8 @@
 // POST /api/analyze — Analisis kontribusi dengan Hermes AI
 
 import { NextRequest, NextResponse } from 'next/server';
-import { analyzeContributions, generatePassport } from '@/lib/hermes';
-import { ANALYSIS_PROMPTS } from '@/data/prompts';
+import { analyzeContributions, generatePassport } from '../../../lib/hermes';
+import { ANALYSIS_PROMPTS } from '../../../data/prompts';
 
 export async function POST(request: NextRequest) {
   try {

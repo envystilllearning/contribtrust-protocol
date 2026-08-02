@@ -1,5 +1,5 @@
-import WalletConnect from '@/components/WalletConnect';
-import ImportButton from '@/components/ImportButton';
+import WalletConnect from '../../components/WalletConnect';
+import ImportButton from '../../components/ImportButton';
 
 export default function Dashboard() {
   return (
@@ -10,7 +10,7 @@ export default function Dashboard() {
       {/* Wallet */}
       <div className="mb-8 p-6 border border-gray-800 rounded">
         <h2 className="text-xl font-bold mb-4">1. Connect Wallet</h2>
-        <WalletConnect onConnect={(addr) => console.log('Connected:', addr)} />
+        <WalletConnect />
       </div>
 
       {/* Import */}
