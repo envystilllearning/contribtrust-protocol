@@ -1,20 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckCircle2, Github, Twitter, MessageSquare, FileText, Zap } from 'lucide-react';
-
 export default function PassportPage() {
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  // Simulasi loading
-  useState(() => {
+  useEffect(() => {
     const timer = setTimeout(() => {
       setScore(78);
       setLoading(false);
     }, 1500);
     return () => clearTimeout(timer);
-  });
+  }, []);
 
   if (loading) {
     return (
