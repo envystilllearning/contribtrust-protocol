@@ -3,7 +3,7 @@ import { Providers } from './providers';
 import { 
   Zap, 
   Shield, 
-  Passport, 
+  Award, 
   Github, 
   Twitter, 
   MessageSquare,
@@ -135,7 +135,7 @@ export default function Home() {
                 
                 <div className="group p-8 rounded-2xl glass hover:bg-white/5 transition-all duration-300 border border-gray-800/50">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Passport className="w-7 h-7 text-purple-400" />
+                    <Award className="w-7 h-7 text-purple-400" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Contribution Passport</h3>
                   <p className="text-gray-400 leading-relaxed">
@@ -181,7 +181,7 @@ export default function Home() {
                 <div className="relative">
                   <div className="relative bg-gray-900/50 border border-gray-800 rounded-2xl p-8 text-center">
                     <div className="w-16 h-16 rounded-full bg-purple-500/20 border-2 border-purple-500 flex items-center justify-center mx-auto mb-6">
-                      <Passport className="w-8 h-8 text-purple-400" />
+                      <Award className="w-8 h-8 text-purple-400" />
                     </div>
                     <h3 className="text-xl font-bold mb-3">Mint Passport</h3>
                     <p className="text-gray-400">
