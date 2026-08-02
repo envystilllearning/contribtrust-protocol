@@ -1,6 +1,6 @@
 # ContribTrust
 
-**Trust layer for AI-powered contributions in the Solana ecosystem.**
+**Proof of Contribution Protocol — portable, verifiable contribution credentials for the Solana ecosystem.**
 
 AI has made creating contributions cheap. This project builds the trust layer that identifies which contributions actually matter.
 
@@ -10,29 +10,25 @@ AI has made creating contributions cheap. This project builds the trust layer th
 
 Creation is faster than verification. Across GitHub, X, Discord, docs, and on-chain governance, more work is generated than can be honestly reviewed. Quantity no longer signals quality.
 
+Protocols, DAOs, and builder programs need a better signal than commit counts or follower counts.
+
 ## Solution
 
-Proof of Contribution Protocol evaluates contributions across platforms and produces a portable on-chain credential: the Contribution Passport. The protocol scores work on originality, technical depth, impact, adoption, consistency, and collaboration — not volume.
+ContribTrust evaluates contributions across platforms and produces a portable on-chain credential: the Contribution Passport.
 
-## Target Users
+The protocol scores work on:
+- originality
+- technical depth
+- community impact
+- adoption
+- consistency
+- collaboration
 
-**Primary:**
-- Protocol teams
-- Builder programs
-- Hackathon organizers
-- Community operators
-- DAO contributors
-
-**Secondary:**
-- Individual builders
-- Researchers
-- Designers
-- Content creators
-- Developers
+It does not rely on a single platform’s metrics. Reputation becomes portable.
 
 ## Why Solana
 
-Portable credentials. Reputation should not be locked inside a single platform. On-chain verification lets contributors carry trust with them.
+Portable credentials make sense on a chain designed for fast, cheap, composable transactions. Reputation should not be locked inside GitHub or X.
 
 ## MVP Features
 
@@ -48,18 +44,37 @@ Portable credentials. Reputation should not be locked inside a single platform. 
 ## Tech Stack
 
 - **Frontend:** Next.js 15 + Tailwind CSS
-- **Analysis:** AI evaluation engine via Hermes-compatible API
+- **Analysis:** AI evaluation engine
 - **Wallet:** Solana Wallet Adapter
 - **On-chain:** SPL token-based passport flow
 - **Deploy:** Vercel
 
-## Status
+## Demo
 
-🚧 **MVP in progress** — targeting a working prototype within 2–3 weeks.
+Live deployment: https://contribtrust.vercel.app
 
-## License
+## Project Structure
 
-MIT
+```
+app/
+├── page.tsx            # Landing page
+├── layout.tsx          # Root layout + metadata
+├── providers.tsx       # Solana wallet providers
+├── dashboard/page.tsx  # Contribution dashboard
+├── passport/page.tsx   # Passport display
+└── api/analyze/route.ts # Analysis endpoint
+
+components/
+├── WalletConnect.tsx
+└── ImportButton.tsx
+
+lib/
+├── hermes.ts           # Analysis client
+└── solana.ts           # Solana utilities
+
+data/
+└── prompts.ts          # Analysis prompt templates
+```
 
 ## Getting Started
 
@@ -93,5 +108,11 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | `HERMES_API_KEY` | API key for AI analysis | Yes |
 | `SOLANA_NETWORK` | `devnet` or `mainnet-beta` | No |
 | `NEXT_PUBLIC_PORTFOLIO_URL` | Public deployment URL | No |
+
+## Status
+
+MVP in progress. Current focus: contribution ingestion, scoring engine, and devnet passport flow.
+
+## License
 
 MIT
