@@ -58,7 +58,7 @@ export default function Home() {
           </Link>
 
           <a
-            href="https://github.com/envystilllearning/contribtrust"
+            href="https://github.com/envystilllearning/contribtrust-protocol"
             target="_blank"
             rel="noopener noreferrer"
             style={{ 
