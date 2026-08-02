@@ -3,69 +3,104 @@ import { Github, ExternalLink } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <section className="max-w-4xl mx-auto px-6 py-24">
-        <div className="flex items-center gap-3 mb-8">
-          <span className="text-sm font-medium text-gray-400">Proof of Contribution Protocol</span>
-          <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs">
+    <main style={{ minHeight: '100vh', backgroundColor: '#000000', color: '#ffffff' }}>
+      <section style={{ maxWidth: '896px', margin: '0 auto', padding: '96px 24px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px' }}>
+          <span style={{ fontSize: '14px', fontWeight: 500, color: '#9ca3af' }}>Proof of Contribution Protocol</span>
+          <span style={{ 
+            display: 'inline-block', 
+            padding: '2px 8px', 
+            borderRadius: '9999px', 
+            backgroundColor: 'rgba(16, 185, 129, 0.1)', 
+            border: '1px solid rgba(16, 185, 129, 0.3)', 
+            color: '#34d399', 
+            fontSize: '12px' 
+          }}>
             Live on Solana
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          <span className="gradient-text">ContribTrust</span>
+        <h1 style={{ fontSize: '48px', fontWeight: 700, marginBottom: '24px', lineHeight: 1.1 }}>
+          <span style={{ 
+            background: 'linear-gradient(135deg, #00d4ff 0%, #00ff88 100%)', 
+            WebkitBackgroundClip: 'text', 
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>ContribTrust</span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-6 leading-relaxed max-w-3xl">
+        <p style={{ fontSize: '20px', color: '#d1d5db', marginBottom: '24px', lineHeight: 1.6, maxWidth: '768px' }}>
           The trust layer for AI-powered contributions in the Solana ecosystem.
         </p>
 
-        <p className="text-base text-gray-500 mb-12 max-w-2xl leading-relaxed">
+        <p style={{ fontSize: '16px', color: '#6b7280', marginBottom: '48px', maxWidth: '512px', lineHeight: 1.6 }}>
           We build the infrastructure that identifies which contributions actually matter — and makes them verifiable on-chain.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
           <Link
             href="/dashboard"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            style={{ 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              gap: '8px', 
+              padding: '12px 24px', 
+              backgroundColor: '#ffffff', 
+              color: '#000000', 
+              fontWeight: 600, 
+              borderRadius: '8px',
+              textDecoration: 'none'
+            }}
           >
             Launch Dashboard
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink style={{ width: '16px', height: '16px' }} />
           </Link>
 
           <a
             href="https://github.com/envystilllearning/contribtrust"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-gray-700 text-gray-300 font-medium rounded-lg hover:border-gray-500 hover:text-white transition-colors"
+            style={{ 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              gap: '8px', 
+              padding: '12px 24px', 
+              border: '1px solid #374151', 
+              color: '#d1d5db', 
+              fontWeight: 500, 
+              borderRadius: '8px',
+              textDecoration: 'none'
+            }}
           >
-            <Github className="w-4 h-4" />
+            <Github style={{ width: '16px', height: '16px' }} />
             View Source
           </a>
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold mb-8">How It Works</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+      <section style={{ maxWidth: '896px', margin: '0 auto', padding: '64px 24px' }}>
+        <h2 style={{ fontSize: '30px', fontWeight: 700, marginBottom: '32px' }}>How It Works</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
           <div>
-            <div className="text-sm font-semibold text-gray-500 mb-2">01</div>
-            <h3 className="text-lg font-bold mb-2">Connect Accounts</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <div style={{ fontSize: '14px', fontWeight: 600, color: '#6b7280', marginBottom: '8px' }}>01</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>Connect Accounts</h3>
+            <p style={{ color: '#9ca3af', fontSize: '14px', lineHeight: 1.6 }}>
               Link your GitHub, Twitter, or Discord. We ingest your contributions automatically.
             </p>
           </div>
           <div>
-            <div className="text-sm font-semibold text-gray-500 mb-2">02</div>
-            <h3 className="text-lg font-bold mb-2">AI Analysis</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <div style={{ fontSize: '14px', fontWeight: 600, color: '#6b7280', marginBottom: '8px' }}>02</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>AI Analysis</h3>
+            <p style={{ color: '#9ca3af', fontSize: '14px', lineHeight: 1.6 }}>
               Our AI evaluates originality, technical depth, and community impact.
             </p>
           </div>
           <div>
-            <div className="text-sm font-semibold text-gray-500 mb-2">03</div>
-            <h3 className="text-lg font-bold mb-2">Mint Passport</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <div style={{ fontSize: '14px', fontWeight: 600, color: '#6b7280', marginBottom: '8px' }}>03</div>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>Mint Passport</h3>
+            <p style={{ color: '#9ca3af', fontSize: '14px', lineHeight: 1.6 }}>
               Generate your Contribution Passport — a portable, verifiable on-chain credential.
             </p>
           </div>
