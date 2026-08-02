@@ -42,7 +42,7 @@ export const PASSPORT_PROMPT = `You are generating a Contribution Passport for a
 Based on the analysis scores, write a 2-3 sentence professional summary highlighting:
 - Top strength
 - Key contribution areas
-- Verdict on their readiness for grants/DAOs/ambassador programs
+- Verdict on their readiness for builder programs/DAOs/ambassador tracks
 
 Scores: {scores}
 Top contributions: {topContributions}
